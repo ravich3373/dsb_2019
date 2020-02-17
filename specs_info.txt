@@ -1,0 +1,504 @@
+0:	The end of system-initiated feedback (Correct) event occurs when the game finishes delivering feedback to the player in response to a correct round attempt (pressing the go button with the correct answer). It contains information that describes the duration and content of the instruction, and will likely occur in conjunction with a beat round event. These events are used to determine the effectiveness of the feedback. We can answer questions like, "how much time elapsed while the game was presenting feedback?"
+
+
+1:	The end of system-initiated feedback (Incorrect) event occurs when the game finishes delivering feedback to the player in response to an incorrect round attempt (pressing the go button with the incorrect answer). It contains information that describes the content of the instruction. These events are used to determine the effectiveness of the feedback. We can answer questions like, "how much time elapsed while the game was presenting feedback?"
+
+
+2:	The end of system-initiated instruction event occurs when the game finishes delivering instructions to the player. It contains information that describes the content of the instruction including duration. These events are used to determine the effectiveness of the instructions and the amount of time they consume. We can answer questions like, "how much time elapsed while the game was presenting instruction?"
+
+
+3:	The end of system-initiated instruction event occurs when the game finishes delivering instructions to the player. It contains information that describes the content of the instruction including duration. These events are used to determine the effectiveness of the instructions and the amount of time they consume. We can answer questions like "how much time elapsed while the game was presenting instruction?"
+
+
+4:	This event occurs when the player drops a weight from the resource table to someplace other than the pan balance (including back on the table). It contains information about the destination and the state of the game. This event is used to diagnose player strategies and understanding.
+
+
+5:	The system-initiated instruction event occurs when the game delivers instructions to the player. It contains information that describes the content of the instruction. This event differs from events 3020 and 3021 as it captures instructions that are not given in response to player action. These events are used to determine the effectiveness of the instructions. We can answer questions like "did players who received instruction X do better than those who did not?"
+
+
+6:	This event occurs when the player drags a chicken or pig to someplace other than an acceptable destination for the chicken or pig. It contains information about the pig or chicken being moved and the destination. The event should occur when the drag is released and the pig or chicken is placed.
+
+
+7:	The system-initiated feedback (Incorrect) event occurs when the game starts delivering feedback to the player in response to an incorrect round attempt (pressing the go button with the incorrect answer). It contains information that describes the content of the instruction. These events are used to determine the effectiveness of the feedback. We can answer questions like, "did players who received feedback X do better than those who did not?"
+
+
+8:	This event occurs when the player hovers the mouse over an interactive object. It contains information about the object under the mouse and the duration of the hover. This event can be used to diagnose things like planning (are they hovering the mouse over tiles for long periods before they use those tiles) and determine which objects the player thinks are important.
+
+
+9:	This event occurs when the player clicks to start the game from the starting screen.
+
+
+10:	This event occurs when the player drags a crystal from the resources to someplace other than the mine carts. It contains information about the chest being moved and the destination. The event should occur when the drag is released and the crystal is placed. These events are used to diagnose player strategies and understanding.
+
+
+11:	The system-initiated feedback (Correct) event occurs when the game starts delivering feedback to the player in response to a correct round attempt (pressing the go button with the correct answer). It contains information that describes the content of the instruction and will likely occur in conjunction with a beat round event. These events are used to determine the effectiveness of the feedback. We can answer questions like "did players who received feedback X do better than those who did not?"
+
+
+12:	This event occurs when the player clicks on the help button. It contains information about the state of the game that caused the player to seek help. This event is usually followed by a 3010 (system-initiated instruction) event. It helps identify points that players feel are too difficult.
+
+
+13:	The system-initiated instruction event occurs when the game delivers instructions to the player. It contains information that describes the content of the instruction. This event differs from events 3020 and 3021 as it captures instructions that are not given in response to player action. These events are used to determine the effectiveness of the instructions. We can answer questions like, "did players who received instruction X do better than those who did not?"
+
+
+14:	The beat round event is triggered when the player finishes a round by correctly balancing the scale and clicking the submit button. This event is used for calculating time spent in a round (for speed and accuracy) attempts at solving a round and the number of rounds the player has completed (completion).
+
+
+15:	This event occurs when the player hovers the mouse over an interactive object. It contains information about the object under the mouse, and the duration of the hover. This event can be used to diagnose things like planning (are they hovering the mouse over tiles for long periods before they use those tiles), and determine which objects the player thinks are important.
+
+
+16:	The start game event is triggered at the very beginning of the game (after the game finishes loading, don’t wait for intro movie to finish). This is used to compute things like time spent in game.
+
+
+17:	The movie started event triggers when an intro or outro movie starts to play. It identifies the movie being played. This is used to determine how long players spend watching the movies (more relevant after the first play through when the skip option is available).
+
+
+18:	The system-initiated feedback (Incorrect) event occurs when the game starts delivering feedback to the player in response to an incorrect round attempt (pressing the go button with the incorrect answer). It contains information that describes the content of the instruction. These events are used to determine the effectiveness of the feedback. We can answer questions like, “did players who received feedback X do better than those who did not?”
+
+
+19:	The beat round event is triggered when the player finishes a round by successfully placing the cauldrons and submitting the solution and when the player finishes a round by successfully selecting the specified cauldron. This event is used for calculating time spent in a round (for speed and accuracy), attempts at solving a round, and the number of rounds the player has completed (completion).
+
+
+20:	The start game event is triggered at the very beginning of the level (after the game finishes loading, don't wait for intro movie to finish). This is used to compute things like time spent in game.
+
+
+21:	The start round event is triggered at the start of a round when the player is to arrange the mushrooms on the stumps. There is only one round per playthrough? This event provides information about the game characteristics of the round (i.e. resources, objectives, setup). It is used in calculating things like time spent in a round (for speed and accuracy), attempts at solving a round, and the number of rounds the player has visited (exposures).
+
+
+22:	The system-initiated feedback (Correct) event occurs when the game starts delivering feedback to the player in response to a correct round attempt (pressing the go button with the correct answer). It contains information that describes the content of the instruction, and will likely occur in conjunction with a beat round event. These events are used to determine the effectiveness of the feedback. We can answer questions like, "did players who received feedback X do better than those who did not?"
+
+
+23:	This event occurs when the player places a hat on one of the birds. It contains information about the hat that was placed, the correctness of the action, and where the placement occurred. This event is used to calculate accuracy and to diagnose player strategies and understanding.
+
+
+24:	This event occurs when the player clicks on something that isn't covered elsewhere. It can be useful in determining if there are attractive distractions (things the player think should do something, but don't) in the game, or diagnosing players who are having mechanical difficulties (near misses).
+
+
+25:	This event occurs when the player drags a dinosaur from the resources to someplace other than the hiding spots in the play area. It contains information about the character being moved, the destination, and the state of the game area. This event is used to diagnose player strategies and understanding.
+
+
+26:	This event occurs when the player places a bucket under one of the cauldrons. It contains information about the bucket that was placed, the correctness of the action, and where the placement occurred. This event is used to calculate accuracy and to diagnose player strategies and understanding.
+
+
+27:	This event occurs when the player clicks to pick up or begins dragging a bowl. It contains information about the bowl being moved and the state of the game area. This event is used to diagnose player strategies and understanding.
+
+
+28:	The exit game event is triggered when the game is quit. This is used to compute things like time spent in game. Depending on platform this may / may not be possible. NOTE: “quit” also means navigating away from game.
+
+
+29:	The system-initiated instruction event occurs when the game delivers instructions to the player. It contains information that describes the content of the instruction. This event differs from events 3020 and 3021 as it captures instructions that are not given in response to player action. These events are used to determine the effectiveness of the instructions. We can answer questions like, “did players who received instruction X do better than those who did not?”
+
+
+30:	This event occurs when the player picks up a chest by clicking on it, or begins dragging a chest. It contains information about the chest that was picked up and the position of the chest. This event is used to calculate accuracy and to diagnose player strategies and understanding.
+
+
+31:	The start round event is triggered at the start of a round when the player is prompted to balance the mine carts. There is only one round per playthrough. This event provides information about the game characteristics of the round (i.e. resources, objectives, setup). It is used in calculating things like time spent in a round (for speed and accuracy), attempts at solving a round, and the number of rounds the player has visited (exposures).
+
+
+32:	This event occurs when the player clicks a rock on one of the gates. It contains information about the rock that was clicked and where the click occurred.
+
+
+33:	The beat round event is triggered when the player skips the tutorial by clicking on the skip button. This event is used for calculating time spent in the tutorial.
+
+
+34:	This event occurs when the player places a mushroom on one of the three stumps. It contains information about the mushroom that was placed, the correctness of the action, and where the placement occurred. This event is used to calculate accuracy and to diagnose player strategies and understanding.
+
+
+35:	This event occurs when the player picks up a chicken or pig by clicking on it, or begins dragging a chicken or pig. It contains information about the object that was picked up and the position of the click.
+
+
+36:	This event occurs when the player on the done button to submit a solution. It contains information about the crystals placed in the carts and the correctness of the action. This event is used to calculate accuracy and to diagnose player strategies and understanding.
+
+
+37:	The end of system-initiated feedback (Correct) event occurs when the game finishes delivering feedback to the player in response to a correct round attempt (pressing the go button with the correct answer). It contains information that describes the duration and content of the instruction and will likely occur in conjunction with a beat round event. These events are used to determine the effectiveness of the feedback. We can answer questions like "how much time elapsed while the game was presenting feedback?"
+
+
+38:	This event occurs when the player clicks on the green check button. It contains information about the weights on the scale the state of the game and the correctness of the action. This event is used to diagnose player strategies and understanding.
+
+
+39:	The end of system-initiated feedback (Incorrect) event occurs when the game finishes delivering feedback to the player in response to an incorrect round attempt (pressing the go button with the incorrect answer). It contains information that describes the content of the instruction. These events are used to determine the effectiveness of the feedback. We can answer questions like, how much time elapsed while the game was presenting feedback?""
+
+
+40:	The end of system-initiated feedback (Incorrect) event occurs when the game finishes delivering feedback to the player in response to an incorrect round attempt (pressing the go button with the incorrect answer). It contains information that describes the content of the instruction. These events are used to determine the effectiveness of the feedback. We can answer questions like "how much time elapsed while the game was presenting feedback?"
+
+
+41:	This event occurs when the player clicks on the play again button.
+
+
+42:	This event occurs when the player places a chest on one of the three pillars. It contains information about the chest that was placed, the correctness of the action, and where the placement occurred. This event is used to calculate accuracy and to diagnose player strategies and understanding.
+
+
+43:	The system-initiated feedback (Incorrect) event occurs when the game starts delivering feedback to the player in response to an incorrect round attempt (pressing the go button with the incorrect answer). It contains information that describes the content of the instruction. These events are used to determine the effectiveness of the feedback. We can answer questions like, did players who received feedback X do better than those who did not?""
+
+
+44:	The start round event is triggered at the start of the game. It contains information about the layout of the activity.
+
+
+45:	The system-initiated feedback (Correct) event occurs when the game starts delivering feedback to the player in response to a correct round attempt (pressing the go button with the correct answer). It contains information that describes the content of the instruction, and will likely occur in conjunction with a beat round event. These events are used to determine the effectiveness of the feedback. We can answer questions like, did players who received feedback X do better than those who did not?""
+
+
+46:	This event occurs when the player clicks on a filled bucket when prompted to select a bucket. It contains information about the bucket that was clicked and the correctness of the action. This event is used to calculate accuracy and to diagnose player strategies and understanding.
+
+
+47:	The beat round event is triggered when the player finishes a round. This event is used for calculating time spent in a round (for speed and accuracy), attempts at solving a round, and the number of rounds the player has completed (completion).
+
+
+48:	The beat round event is triggered when the player finishes a round by correctly arranging the mushrooms and submitting the solution. This event is used for calculating time spent in a round (for speed and accuracy), attempts at solving a round, and the number of rounds the player has completed (completion).
+
+
+49:	This event occurs when the player clicks on something that isn’t covered elsewhere. It can be useful in determining if there are attractive distractions (things the player think should do something, but don’t) in the game, or diagnosing players who are having mechanical difficulties (near misses).
+
+
+50:	The start round event is triggered at the start of a round when a new arrangement of dinosaurs and houses is presented. This event provides information about the game characteristics of the round (i.e. resources, objectives, setup). It is used in calculating things like time spent in a round (for speed and accuracy), attempts at solving a round, and the number of rounds the player has visited (exposures).
+
+
+51:	This event occurs when the player clicks on the go button to trigger the dinosaur to fly. It contains information about the distance selected, the correctness of the action, and where the click occurred. This event is used to calculate accuracy and to diagnose player strategies and understanding.
+
+
+52:	The start round event is triggered at the start of a round when the player is prompted to place the cauldrons and when the player is prompted to select a certain cauldron. This event provides information about the game characteristics of the round (i.e. resources, objectives, setup). It is used in calculating things like time spent in a round (for speed and accuracy), attempts at solving a round, and the number of rounds the player has visited (exposures).
+
+
+53:	This event occurs when the player drags a bucket to the resource area. It contains information about the bucket being moved. The event should occur when the drag is released and the bucket is placed. These events are used to diagnose player strategies and understanding.
+
+
+54:	The beat round event is triggered when the player finishes a round by successfully balancing the carts and submitting the solution. This event is used for calculating time spent in a round (for speed and accuracy), attempts at solving a round, and the number of rounds the player has completed (completion).
+
+
+55:	This event occurs when the player places a bowl of snacks on the plate. It contains information about the bowl that was placed where the bowl was picked up from and the correctness of the action. This event is used to diagnose player strategies and understanding.
+
+
+56:	The beat level event is triggered when a level has been completed and the player has cleared all rounds in the current layout (occurs at the same time as the beat round event for the last round in the previous level). This event is used for calculating time spent in a level (for speed and accuracy), and the number of levels the player has completed (completion).
+
+
+57:	This event occurs when the player drags a bug to someplace other than an acceptable destination for the bug. It contains information about the rock being moved and the destination. The event should occur when the drag is released and the rock is placed.
+
+
+58:	This event occurs when the player clicks on one of the options of object amounts. It contains information about the option that was clicked, the correctness of the option, and where the click occurred. This event is used to calculate accuracy and to diagnose player strategies and understanding.
+
+
+59:	This event occurs when the player clicks on something that isn't covered elsewhere. It can be useful in determining if there are attractive distractions (things the player think should do something but don't) in the game or diagnosing players who are having mechanical difficulties (near misses).
+
+
+60:	This event occurs when the player clicks on one of the dinosaurs. It contains information about the the state of the game and the correctness of the action. This event is used to diagnose player strategies and understanding.
+
+
+61:	The reset dinosaurs event is triggered when the player has placed the last dinosaur, but not all dinosaurs are in the correct position. This event provides information about the game characteristics of the round (i.e. resources, objectives, setup). It is used to indicate a significant change in state during play.
+
+
+62:	The beat round event is triggered when the player finishes a round by filling the jar. This event is used for calculating time spent in a round and the number of rounds the player has completed (completion).
+
+
+63:	The start level event is triggered when a new level begins (at the same time as the start round event for the first round in the level). This event is used for calculating time spent in a level (for speed and accuracy), and the number of levels the player has completed (completion).
+
+
+64:	The beat round event is triggered when the player finishes the tutorial. This event is used for calculating time spent in the tutorial.
+
+
+65:	This event occurs when the dinosaurs finish draining the pool. This event is to identify a change in the state of the game.
+
+
+66:	This event occurs when the player drags a castle or the shovel to someplace other than an acceptable destination for the castle or shovel. It contains information about the castle being moved and the destination. The event should occur when the drag is released and the castle or shovel is placed.
+
+
+67:	This event occurs when the player places a crystal in a mine cart. It contains information about the crystal that was placed and where the placement occurred. This event is used to calculate accuracy and to diagnose player strategies and understanding.
+
+
+68:	This event occurs when the player places a castle in the play area. It contains information about the castle that was placed and where the placement occurred.
+
+
+69:	This event occurs when the player chooses a number of containers from the options. It contains information about the choice, and the correctness of the action. This event is used to diagnose player strategies and understanding.
+
+
+70:	The system-initiated feedback (Incorrect) event occurs when the game starts delivering feedback to the player in response to an incorrect round attempt (pressing the go button with the incorrect answer). It contains information that describes the content of the instruction. These events are used to determine the effectiveness of the feedback. We can answer questions like "did players who received feedback X do better than those who did not?"
+
+
+71:	The start game event is triggered at the very beginning of the level (after the game finishes loading don't wait for intro movie to finish). This is used to compute things like time spent in game.
+
+
+72:	This event occurs when the player drags a hat to someplace other than an acceptable destination for the hat. It contains information about the hat being moved and the destination. The event should occur when the drag is released and the hat is placed. These events are used to diagnose player strategies and understanding.
+
+
+73:	This event occurs when the player on the done button to submit a solution. It contains information about the length of caterpillars dragged and the correctness of the action. This event is used to calculate accuracy and to diagnose player strategies and understanding.
+
+
+74:	This event occurs when the player clicks on the container icon to fill the tub. It contains information about the state of the game area.
+
+
+75:	This event occurs when the player drags a crystal from the cart to the resource area. It contains information about the crystal being moved and the destination. The event should occur when the drag is released and the crystal is placed. These events are used to diagnose player strategies and understanding.
+
+
+76:	This event occurs when the player on the done button to submit a solution. It contains information about the mushrooms placed on the stumps and the correctness of the action. This event is used to calculate accuracy and to diagnose player strategies and understanding.
+
+
+77:	The end tutorial event is triggered when the player finishes the tutorial. This event is used for calculating time spent in the tutorial.
+
+
+78:	This event occurs when the player clicks on the character that provides a hint (Sorry, I don't know his name). It contains information about the state of the game when the player chooses to seek help. This event is usually followed by a 3010 (system-initiated instruction) event. It helps identify points that players feel are too difficult.
+
+
+79:	This event occurs when the player drags a chest to someplace other than an acceptable destination for the chest. It contains information about the chest being moved and the destination. The event should occur when the drag is released and the chest is placed. These events are used to diagnose player strategies and understanding.
+
+
+80:	This event occurs when the player clicks to pick up or begins dragging a dinosaur in the resource bin. It contains information about the dinosaur being moved, the position of the click, and the state of the game area. This event is used to diagnose player strategies and understanding.
+
+
+81:	This event occurs when the player picks up a bug by clicking on it, or begins dragging a bug. It contains information about the bug that was picked up and the position of the click.
+
+
+82:	This event occurs when the player on the done button to submit a solution. It contains information about the chests placed on the pillars and the correctness of the action. This event is used to calculate accuracy and to diagnose player strategies and understanding.
+
+
+83:	The movie ended event triggers when an intro or outro movie ends. It identifies the movie being played. This is used to determine how long players spend watching the movies (more relevant after the first play through when the skip option is available).
+
+
+84:	The beat round event is triggered when the player finishes a round. This event is used for calculating time spent in a round (for speed and accuracy) attempts at solving a round and the number of rounds the player has completed (completion).
+
+
+85:	This event occurs when the player drags a line from a rocket. It contains information about the rocket that was dragged and the height of the drag.
+
+
+86:	This event occurs when the player drags a bottle to someplace other than an acceptable destination for the bottle. It contains information about the bottle being moved and the destination. The event should occur when the drag is released and the bottle is placed.
+
+
+87:	The start round event is triggered at the start of a round. This event provides information about the game characteristics of the round (i.e. resources, objectives, setup). It is used in calculating things like time spent in a round (for speed and accuracy), attempts at solving a round, and the number of rounds the player has visited (exposures).
+
+
+88:	This event occurs when the player picks up a bucket by clicking on it, or begins dragging a bucket. It contains information about the bucket that was picked up and the position of the click.
+
+
+89:	The movie skipped event triggers when the player presses the skip button during an intro or outro movie. It identifies the movie being played. This is used to determine how long players spend watching the movies (more relevant after the first play through when the skip option is available).
+
+
+90:	The start round event is triggered at the start of a round when the player is prompted to fill a jar. It is used in calculating things like time spent in a round and the number of rounds the player has visited (exposures).
+
+
+91:	This event occurs when the player drags a hat to the resource area. It contains information about the hat being moved. The event should occur when the drag is released and the hat is placed. These events are used to diagnose player strategies and understanding.
+
+
+92:	This event occurs when the player drags the object below the crystal. It occurs when the drag has finished. This event is used to diagnose player strategies and understanding.
+
+
+93:	The start round event is triggered at the start of a round when a new dinosaur and food resources are presented. This event provides information about the game characteristics of the round (i.e. resources objectives setup). It is used in calculating things like time spent in a round (for speed and accuracy) attempts at solving a round and the number of rounds the player has visited (exposures).
+
+
+94:	This event occurs when the player finishes dragging a toy to a new location. It contains information about the toy being moved and the destination.
+
+
+95:	The start round event is triggered at the start of a round when the player is prompted to weigh and arrange the chests. There is only one round per playthrough. This event provides information about the game characteristics of the round (i.e. resources, objectives, setup). It is used in calculating things like time spent in a round (for speed and accuracy), attempts at solving a round, and the number of rounds the player has visited (exposures).
+
+
+96:	The start filling tub event is triggered after a round completes and the user is prompted to fill up the tub. It is used to separate a section of gameplay that is different from the estimation section of the game.
+
+
+97:	This event occurs when the player places sand in one of the molds. It contains information about the mold that was filled and where the click occurred.
+
+
+98:	This event occurs when the player fills in one of the clouds partially. It contains information about the cloud that was filled.
+
+
+99:	The skip tutorial event is triggered when the player skips the tutorial by clicking on the skip button. This event is used for calculating time spent in the tutorial.
+
+
+100:	This event occurs when the player drops the watering can. It contains information about the location of the placement.
+
+
+101:	The end of system-initiated feedback (Correct) event occurs when the game finishes delivering feedback to the player in response to a correct round attempt (pressing the go button with the correct answer). It contains information that describes the duration and content of the instruction, and will likely occur in conjunction with a beat round event. These events are used to determine the effectiveness of the feedback. We can answer questions like, how much time elapsed while the game was presenting feedback?""
+
+
+102:	This event occurs when the player drags a chest to the resource area. It contains information about the chest being moved. The event should occur when the drag is released and the chest is placed. These events are used to diagnose player strategies and understanding.
+
+
+103:	This event occurs when the player drags one of the caterpillars to measure a bird. It contains information about the caterpillar that was dragged and where the click occurred. The event should occur when the drag is released and the caterpillar’s size is set.
+
+
+104:	This event occurs when the player places a chicken on the see-saw. It contains information about the state of the see-saw and where the placement occurred.
+
+
+105:	The finished round event is triggered when the player finishes a round (hit milestone). This event is used for calculating time spent in a round, and the number of rounds the player has completed (completion).
+
+
+106:	This event occurs when the player places a piece of food on the scale. It contains information about the food that was placed the correctness of the action and where the placement occurred. This event is used to diagnose player strategies and understanding.
+
+
+107:	This event occurs when the player places a dinosaur in a house. It contains information about the dinosaur that was placed, the correctness of the action, and where the placement occurred. This event is used to diagnose player strategies and understanding.
+
+
+108:	This event occurs when the player drags a mushroom to someplace other than an acceptable destination for the mushroom. It contains information about the mushroom being moved and the destination. The event should occur when the drag is released and the mushroom is placed. These events are used to diagnose player strategies and understanding.
+
+
+109:	This event occurs when the player picks up a mushroom by clicking on it, or begins dragging a mushroom. It contains information about the mushroom that was picked up and the position of the mushroom. This event is used to calculate accuracy and to diagnose player strategies and understanding.
+
+
+110:	This event occurs when the player clicks on the character that provides a hint (Sorry I don't know his name). It contains information about the state of the game when the player chooses to seek help. This event is usually followed by a 3010 (system-initiated instruction) event. It helps identify points that players feel are too difficult.
+
+
+111:	The start round event is triggered at the start of a round. This event provides information about the game characteristics of the round (i.e. resources objectives setup). It is used in calculating things like time spent in a round (for speed and accuracy) attempts at solving a round and the number of rounds the player has visited (exposures).
+
+
+112:	This event occurs when the player drags a piece of food from the resources to someplace other than the scale in the play area. It contains information about the food being moved the destination and the state of the game area. This event is used to diagnose player strategies and understanding.
+
+
+113:	This event occurs when the player clicks on one of the watering holes while holding a shell filled with water. It contains information about the state of the game and the correctness of the action. This event is used to diagnose player strategies and understanding.
+
+
+114:	This event occurs when the player drags a bowl to the scale. It contains information about the bowl being moved the destination and the state of the game area. This event is used to diagnose player strategies and understanding.
+
+
+115:	This event occurs when the player clicks on the button that provides a hint. It contains information about the state of the game when the player chooses to seek help. This event is usually followed by a 3010 (system-initiated instruction) event. It helps identify points that players feel are too difficult.
+
+
+116:	This event occurs when the player drags a bowl to someplace other than the scale or plate in the play area. It contains information about the bowl being moved the destination and the state of the game area. This event is used to diagnose player strategies and understanding.
+
+
+117:	This event occurs when the player picks up a crystal by clicking on it, or begins dragging a crystal. It contains information about the chest that was picked up and the position of the chest. This event is used to calculate accuracy and to diagnose player strategies and understanding.
+
+
+118:	The end of system-initiated instruction event occurs when the game finishes delivering instructions to the player. It contains information that describes the content of the instruction including duration. These events are used to determine the effectiveness of the instructions and the amount of time they consume. We can answer questions like, “how much time elapsed while the game was presenting instruction?”
+
+
+119:	The start round event is triggered at the start of each round. There is only one round per playthrough. This event provides information about the game characteristics of the round (i.e. resources, objectives, setup). It is used in calculating things like time spent in a round (for speed and accuracy), attempts at solving a round, and the number of rounds the player has visited (exposures).
+
+
+120:	This event occurs when the player clicks on one of the dinosaurs. It contains information about the state of the game and the correctness of the action. This event is used to diagnose player strategies and understanding.
+
+
+121:	The exit game event is triggered when the game is quit. This is used to compute things like time spent in game. Depending on platform this may / may not be possible. NOTE: quit also means navigating away from game.
+
+
+122:	This event occurs when the player pours the contents of one of the bottles into the jar. It contains information about the bottle that was poured and where the state of the jar.
+
+
+123:	The end of system-initiated feedback (Incorrect) event occurs when the game finishes delivering feedback to the player in response to an incorrect round attempt (pressing the go button with the incorrect answer). It contains information that describes the content of the instruction. These events are used to determine the effectiveness of the feedback. We can answer questions like, “how much time elapsed while the game was presenting feedback?”
+
+
+124:	This event is triggered when the player clicks the GO button during the tutorial phase. There are no right or wrong answers, only the distance travelled is collected
+
+
+125:	The system-initiated instruction event occurs when the game delivers instructions to the player. It contains information that describes the content of the instruction. This event differs from events 3020 and 3021 as it captures instructions that are not given in response to player action. These events are used to determine the effectiveness of the instructions. We can answer questions like, did players who received instruction X do better than those who did not?""
+
+
+126:	This event occurs when the player begins dragging from rocket. It contains information about the rocket that was dragged from and the position of the click.
+
+
+127:	This event occurs when the player drops a weight on the pan balance. It contains information about the weight being dropped the state of the game and the correctness of the action. This event is used to diagnose player strategies and understanding.
+
+
+128:	The beat round event is triggered when the player finishes a round by correctly placing all presented dinosaurs. This event is used for calculating time spent in a round (for speed and accuracy), attempts at solving a round, and the number of rounds the player has completed (completion).
+
+
+129:	This event occurs when the player on the done button to submit a solution. It contains information about the hats placed on the birds and the correctness of the action. This event is used to calculate accuracy and to diagnose player strategies and understanding.
+
+
+130:	This event occurs when the player clicks on the button to play again.
+
+
+131:	The system-initiated feedback (Correct) event occurs when the game starts delivering feedback to the player in response to a correct round attempt (pressing the go button with the correct answer). It contains information that describes the content of the instruction, and will likely occur in conjunction with a beat round event. These events are used to determine the effectiveness of the feedback. We can answer questions like, “did players who received feedback X do better than those who did not?”
+
+
+132:	This event occurs when the player on the done button to submit a solution. It contains information about the buckets placed under the cauldrons and the correctness of the action. This event is used to calculate accuracy and to diagnose player strategies and understanding.
+
+
+133:	This event occurs when the player clicks on an item on the shelf of items. It contains information about the item that was clicked, the correctness of the action, and where the action occurred. This event is used to calculate accuracy and to diagnose player strategies and understanding.
+
+
+134:	This event occurs when the player clicks on the bird to trigger dropping an egg. It contains information about where the click occurred.
+
+
+135:	This event occurs when the player places a flower in the basket. It contains information about the state of the flowers and the location of the placement.
+
+
+136:	This event occurs when the player clicks a group of objects. It contains information about the group clicked, the state of the game, and the correctness of the action. This event is used to diagnose player strategies and understanding.
+
+
+137:	The exit game event is triggered when the game is quit. This is used to compute things like time spent in game. Depending on platform this may / may not be possible. NOTE: "quit" also means navigating away from game.
+
+
+138:	This event occurs when the player places a pig on the see-saw. It contains information about the state of the see-saw and where the placement occurred.
+
+
+139:	This event occurs when the player puts the watering can down after watering flowers or after a 1 second period of inactivity while watering flowers (inactive timer should start only if flowers actually grow). It contains information about the state of the flowers.
+
+
+140:	This event occurs when the player clicks to pick up or begins dragging a bath toy. It contains information about the toy being moved, and the position of the click.
+
+
+141:	The end of system-initiated feedback (Correct) event occurs when the game finishes delivering feedback to the player in response to a correct round attempt (pressing the go button with the correct answer). It contains information that describes the duration and content of the instruction, and will likely occur in conjunction with a beat round event. These events are used to determine the effectiveness of the feedback. We can answer questions like, “how much time elapsed while the game was presenting feedback?”
+
+
+142:	The start game event is triggered at the very beginning of the game (after the game finishes loading, don't wait for intro movie to finish). It includes information on the current version of the game loaded. This is used to compute things like time spent in game.
+
+
+143:	This event occurs when the player picks up the watering can or a flower, or begins dragging the watering can or flower. It contains information about the flower that was picked up and the position of the click.
+
+
+144:	The start picking mushrooms event is triggered when the player is prompted to pick mushrooms. This event indicates a section of gameplay separate from the arranging section of gameplay.
+
+
+145:	This event occurs when the player picks up a hat or caterpillar by clicking on it, or begins dragging a hat or caterpillar. It contains information about the hat or caterpillar that was picked up and the position of the click.
+
+
+146:	This event occurs when the player drags a bowl from the scale to the resources. It contains information about the bowl being moved and the state of the game area. This event is used to diagnose player strategies and understanding.
+
+
+147:	This event occurs when the player drags a mushroom to the resource area. It contains information about the mushroom being moved. The event should occur when the drag is released and the mushroom is placed. These events are used to diagnose player strategies and understanding.
+
+
+148:	The end of system-initiated instruction event occurs when the game finishes delivering instructions to the player. It contains information that describes the content of the instruction including duration. These events are used to determine the effectiveness of the instructions and the amount of time they consume. We can answer questions like, how much time elapsed while the game was presenting instruction?""
+
+
+149:	This event occurs when the player places a chest on one the scale. It contains information about the chest that was placed and where the placement occurred. This event is used to diagnose player strategies and understanding.
+
+
+150:	This event occurs when the player clicks to pick up or begins dragging a piece of food from the resource bin or scale. It contains information about the food being moved the position of the click and the state of the game area. This event is used to diagnose player strategies and understanding.
+
+
+151:	This event occurs when the player drags a bucket to someplace other than an acceptable destination for the bucket. It contains information about the bucket being moved and the destination. The event should occur when the drag is released and the bucket is placed. These events are used to diagnose player strategies and understanding.
+
+
+152:	This event occurs when the player moves the shell to the waterfall and fills it with water. It contains information about the state of the game. This event is used to diagnose player strategies and understanding.
+
+
+153:	This event occurs when the player drags a bug to the tape measure. It contains information about the bug that was dragged and the location of the placement.
+
+
+154:	This event is triggered when a video starts playing
+
+
+155:	This event occurs when the player clicks an interactive object in the victory screen section. It contains information about the object that was clicked, where the click occurred.
+
+
+156:	This event occurs when the player picks up a bottle by clicking on it, or begins dragging a bottle. It contains information about the bottle that was picked up and the position of the click.
+
+
+157:	This event occurs when the player drops a weight on the table after picking it up from the scale. It contains information about the weight being dropped the state of the game and the correctness of the action. This event is used to diagnose player strategies and understanding.
+
+
+158:	This event occurs when the player fills the pool with water and the dinosaurs begin draining it. It contains information about the state of the pool. This event is to identify a change in the state of the game.
+
+
+159:	The finish filling tub event is triggered after the player finishes filling up the tub. It is used to separate a section of gameplay that is different from the estimation section of the game.
+
+
+160:	This event occurs when the player fills in one of the clouds. It contains information about the cloud that was filled.
+
+
+161:	This event occurs when the player clicks to have the cloud empty into the pool. It contains information about the cloud that was clicked and the state of the pool.
+
+
+162:	This event occurs when the player picks one of the mushrooms in the resource area. It contains information about the mushroom that was picked and where the click occurred.
+
+
+163:	The beat round event is triggered when the player finishes picking mushrooms. This event indicates a section of gameplay separate from the arranging section of gameplay.
+
+
+164:	The finished round event is triggered when the player finishes drawing a shape that is detected as matching the prompt. This event is used for calculating time spent drawing a shape (for speed and accuracy), attempts at drawing a shape, and the number of shapes the player has completed (completion).
+
+
+165:	The start round event is triggered at the start of the tutorial. It is used in calculating time spent in the tutorial.
+
+
+166:	The start tutorial event is triggered at the start of the tutorial. It is used in calculating time spent in the tutorial.
+
+
+167:	This event occurs when the player picks up a weight from the table. It contains information about the weight being picked. This event is used to diagnose player strategies and understanding.
+
+

@@ -1,0 +1,3 @@
+1) find how to differentiate game session terminated by user before it ends vs total game has ended so user left.
+2) generate respective tokens for the above cases and add them at the end of the series.
+3) 
